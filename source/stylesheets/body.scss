@@ -1,0 +1,51 @@
+.kt-body {
+  background-color: white;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  padding: 18vh 1rem;
+  text-align: center;
+  font-size: 40px;
+}
+
+.img-tiles {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.img-cont {
+  font-size: 0;
+}
+
+.img-each {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+}
+
+.img-each:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 860px) {
+
+  .img-each {
+    width: calc(25% - 6px);
+  }
+
+  .img-each:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  .img-each:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+.img-each img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

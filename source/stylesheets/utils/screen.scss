@@ -1,0 +1,28 @@
+$shop-screen-small: 400px !default;
+$shop-screen-medium: 600px !default;
+$shop-screen-large: 900px !default;
+$shop-screen-huge: 1400px !default;
+
+@mixin shop-screen($screen) {
+
+    @if $screen == all {
+        @content;
+    }
+
+    @else if $screen == small {
+        @media screen and (max-width: $shop-screen-small) { @content; }
+    }
+
+    @else if $screen == medium {
+        @media screen and (min-width: $shop-screen-medium) { @content; }
+    }
+
+    @else if $screen == large {
+        @media screen and (min-width: $shop-screen-large) { @content; }
+    }
+
+    @else if $screen == huge {
+        @media screen and (min-width: $shop-screen-huge) { @content; }
+    }
+
+}
